@@ -1,13 +1,12 @@
-package com.example.home.demo
+package com.example.home.demo.ui
 
-import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
-import android.text.Selection.selectAll
 import android.widget.Toast
+import com.example.home.demo.R
+import com.example.home.demo.util.toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.system.exitProcess
 
 /*
  - 2 cai EditText: user name (username, password (******)
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         login.setOnClickListener {
             passWordH.setSelectAllOnFocus(true)
             passWordH.selectAll()
-            Toast.makeText(this, "Nhap sai roi kia", Toast.LENGTH_LONG).show()
+            toast("Nhap sai roi kia")
         }
         exit.setOnClickListener {
             val builder = AlertDialog.Builder(this@MainActivity)
